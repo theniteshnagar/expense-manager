@@ -11,13 +11,13 @@ const ExpenseSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please add a title"],
     },
-    amount: {
-      type: Number,
-      required: [true, "Please add an amount"],
-    },
     category: {
       type: String,
       required: [true, "Please add a category"],
+    },
+    amount: {
+      type: Number,
+      required: [true, "Please add an amount"],
     },
     paymentMethod: {
       type: String,
