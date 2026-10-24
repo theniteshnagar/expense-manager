@@ -16,9 +16,11 @@ const UserSchema = new mongoose.Schema(
       required: [true, "Please add a password"],
     },
   },
-  { timestamps },
+  {
+    timestamps: true,
+  },
 );
 
-const User = mongoose.model('User', UserSchema);
+const User = mongoose.model("User", UserSchema);
 
 module.exports = User;
