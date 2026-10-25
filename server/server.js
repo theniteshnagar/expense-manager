@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors")
 
 const { PORT, MONGODB_URI } = require("./utils/constants.utils");
 const { registerUser, loginUser } = require("./controllers/authController");
@@ -8,6 +9,7 @@ const { protect } = require("./middleware/authMiddleware");
 
 const app = express();
 app.use(express.json())
+app.use(cors())
 
 mongoose.connect(MONGODB_URI)
 
